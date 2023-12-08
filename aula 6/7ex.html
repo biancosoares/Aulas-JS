@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 7</title>
+    <style>
+        div{
+            background-color: aquamarine;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 4px;
+            box-shadow: 3px, 3px, 3px;
+            padding: 40px;
+            border: solid, 2px, black;
+            border-style: groove;
+            margin-top: auto;
+        }
+        input[type="text"]{
+            width: 260px;
+            height: 30px;
+            border-radius: 2px; 
+            margin-bottom: 20px;  
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;            
+        }
+        button{
+            font-size: 20px;
+            border-radius: 4px;
+            border-style: ridge;
+            border-color: gold;
+            width: 130px
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Novo exemplo</h1>
+    <h2>Vlaidação de formulário</h2>
+    <div name="formulário" action="cadastro.php" onsubmit="return validar()" method="post">
+        <label for="idade">Idade:</label>
+        <input id="idade" type="text">
+        <br>
+        <p id="msg" style="color: red;"></p>
+        <button id="enviar" onclick="validar()">Validar</button>
+
+    </div>
+
+    <script>
+        function validar(){
+            const id = document.getElementById ("idade").value;
+            let texto;
+            if (isNaN(id) || id< 1 || id>130)
+            texto ="Idade inválida!";
+        else
+        texto = "Idade Ok!";
+            document.getElementById("msg").innerHTML = texto;
+        }
+
+    </script>
+    
+</body>
+</html>

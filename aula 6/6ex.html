@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 6</title>
+    <style>
+        form{
+            background-color: aquamarine;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 4px;
+            box-shadow: 3px, 3px, 3px;
+            padding: 40px;
+            border: solid, 2px, black;
+            border-style: groove;
+            margin-top: auto;
+        }
+        input[type="text"]{
+            width: 260px;
+            height: 30px;
+            border-radius: 2px; 
+            margin-bottom: 20px;  
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;            
+        }
+        input[type="submit"]{
+            font-size: 20px;
+            border-radius: 4px;
+            border-style: ridge;
+            border-color: gold;
+            width: 130px
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Novo exemplo</h1>
+    <h2>Vlaidação de formulário</h2>
+    <form name="formulário" action="cadastro.php" onsubmit="return validar()" method="post">
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text">
+        <br>
+        <input id="enviar" type="submit" value="enviar">
+
+    </form>
+
+    <script>
+        function validar(){
+            let dados = document.forms["formulário"]["nome"].value;
+            if (dados == ""){
+                alert("O preenchimento do campo 'nome' obrigatório!");
+                return false;
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

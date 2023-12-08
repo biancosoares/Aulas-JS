@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 3</title>
+</head>
+<body>
+    <h1>Novo Exemplo</h1>
+    <p>Alterar texto do imput:</p>
+    <label for="caixa">Nome:</label>
+    <input id="caixa" type="text" placeholder="Digite seu nome aqui" onchange="AtualizarTexto();"><br>
+    <label for="email">Email:</label>
+    <input id="email" type="text" placeholder="Digite seu Email aqui" onchange="AtualizarEmail();">
+    <br><br>
+    <input type="button" value="Limpar" onclick="Limpar()">
+
+    <script>
+        function AtualizarTexto(){
+            const texto = document.getElementById("caixa");
+            texto.value = texto.value.toUpperCase();
+        }
+
+        function AtualizarEmail(){
+            const email = document.getElementById("email");
+            email.value = email.value.toLowerCase();
+        }    
+        
+        function Limpar(){
+            document.getElementById("caixa").value = "";
+            document.getElementById("email").value = "";
+        }
+    </script>
+    
+</body>
+</html>

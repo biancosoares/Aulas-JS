@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo com "Hover"</title>
+</head>
+<body>
+<h1>Exemplo com "Hover"</h1>
+    <div onmouseover="atualizar(this)"; onmouseout= "versaoatual(this)"style="background-color: gold; width: 300px; height: 200px; font-size: 50px;">
+        <p style="text-align: center; padding-top: 70px;">Wadzap</p>
+    </div>
+
+    <script>
+        function atualizar(obj){
+            obj.innerHTML = "Atualizar agora?!?"
+            obj.style.textAlign = "center";
+            obj.style.paddingTop = "70px";
+
+        }
+
+        function versaoatual (obj){
+            obj.innerHTML = "Whadzap"
+            obj.style.textAlign = "center";
+            obj.style.paddingTop = "100px";
+           
+
+
+        }
+    </script>
+    
+</body>
+</html>

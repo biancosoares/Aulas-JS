@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 2</title>
+</head>
+<body>
+    <h1>Imagens fortes a seguir!</h1>
+    <img src="download.jpeg" alt="">
+    <br>
+    <button onclick="trocar();">Trocar Imagem </button>
+
+    <script>
+        let modo = 0;
+        function trocar(){
+           document.getElementsByTagName ("img")[0].src = "images.png";
+           if (modo == 0){
+            document.getElementsByTagName ("img")[0].src = "download.jpeg";
+            modo = 1;
+           }else{
+            modo = 0;
+            document.getElementsByTagName ("img")[0].src = "images.png";
+           }
+
+        }
+
+    </script>
+</body>
+</html>
